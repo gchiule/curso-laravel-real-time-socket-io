@@ -3,6 +3,9 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use App\Events\{
+    PostCreated
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +26,9 @@ Route::get('/create-post', function () {
         'body' => Str::random(400),
     ]);
 
-    return 'Ok!';
+    //event(new PostCreated($post));
+
+    return 'Post successfully created!';
 });
 
 Route::get('/', function () {

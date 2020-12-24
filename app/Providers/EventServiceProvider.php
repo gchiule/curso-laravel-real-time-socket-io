@@ -7,15 +7,19 @@ use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
 
-use App\Models\Post;
-use App\Observers\PostObserver;
+use App\Models\{
+    Post
+};
+use App\Observers\{
+    PostObserver
+};
 
 use App\Events\{
     PostCreated
 };
 
 use App\Listeners\{
-    NotifyUserNewPostCreated
+    NotifyUsersNewPostCreated
 };
 
 class EventServiceProvider extends ServiceProvider
@@ -31,7 +35,7 @@ class EventServiceProvider extends ServiceProvider
         ],
 
         PostCreated::class => [
-            NotifyUserNewPostCreated::class
+            NotifyUsersNewPostCreated::class
         ]
     ];
 

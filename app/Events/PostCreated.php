@@ -13,7 +13,7 @@ use App\Models\{
     Post
 };
 
-class PostCreated
+class PostCreated implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -36,6 +36,6 @@ class PostCreated
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new Channel('post-created');
     }
 }
