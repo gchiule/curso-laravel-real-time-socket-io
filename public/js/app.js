@@ -29612,6 +29612,7 @@ module.exports = yeast;
 /***/ (function(module, exports) {
 
 window.Echo.channel('laravel_database_post-created').listen('PostCreated', function (e) {
+  console.log('Channel listened here...');
   console.log(e);
   console.log(e.post);
 });
@@ -29680,8 +29681,8 @@ __webpack_require__(/*! ./Echo */ "./resources/js/Echo.js");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/cursos/especializati/curso-laravel-real-time-with-socket-io/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/cursos/especializati/curso-laravel-real-time-with-socket-io/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Dockerprojects\cursos\especializati\curso-laravel-real-time-socket-io\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Dockerprojects\cursos\especializati\curso-laravel-real-time-socket-io\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ }),
