@@ -29681,8 +29681,8 @@ __webpack_require__(/*! ./Echo */ "./resources/js/Echo.js");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Dockerprojects\cursos\especializati\curso-laravel-real-time-socket-io\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Dockerprojects\cursos\especializati\curso-laravel-real-time-socket-io\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Docker\cursos\especializati\laravel-realtime-with-socket-io\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Docker\cursos\especializati\laravel-realtime-with-socket-io\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ }),
