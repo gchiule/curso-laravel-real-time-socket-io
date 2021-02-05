@@ -12,6 +12,7 @@ use Illuminate\Queue\SerializesModels;
 use App\Models\{
     Post
 };
+use Carbon\Carbon;
 
 class PostCreated implements ShouldBroadcast
 {
@@ -37,5 +38,15 @@ class PostCreated implements ShouldBroadcast
     public function broadcastOn()
     {
         return new Channel('post-created');
+    }
+
+    public function broadcastWith()
+    {
+        return [
+            'post' => [
+                'name' => $this->post->title,
+                'date' => Carbon::parse($this->post->created_at)->format('d/m/Y H:i:s')
+            ]
+        ];
     }
 }

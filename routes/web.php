@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use App\Events\{
     PostCreated
 };
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,4 @@ Route::get('/create-post', function () {
     return 'Post successfully created!';
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SiteController::class, 'index']);
